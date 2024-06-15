@@ -65,7 +65,7 @@ app.get('/profile/:id', (req, res) => {
   }
 })
 
-app.post('/image', (req, res) => {
+app.put('/image', (req, res) => {
   const { id } = req.body;
   const profile = database.users.filter(user => user.id === id);
   if (profile.length) {
